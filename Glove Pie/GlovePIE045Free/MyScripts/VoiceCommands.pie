@@ -1,0 +1,63 @@
+﻿if said("PC") then
+  var.go = 1
+end if
+
+if var.go == 1 then
+
+if said("play") then
+  Key.Ctrl+Key.Alt+Key.Ins = 1
+  wait 300 ms
+  Key.Ctrl+Key.Alt+Key.Ins = 0
+  var.go = 0
+end if
+
+if said("pause") then
+  Key.Ctrl+Key.Alt+Key.Home = 1
+  wait 300 ms
+  Key.Ctrl+Key.Alt+Key.Home = 0
+  var.go = 0
+end if
+
+if said("next") then
+  Key.Ctrl+Key.Alt+Key.Pgdn = 1
+  wait 300 ms
+  Key.Ctrl+Key.Alt+Key.Pgdn = 0
+  var.go = 0
+end if
+
+if said("preceding") then
+  Key.Ctrl+Key.Alt+Key.Pgup = 1
+  wait 300 ms
+  Key.Ctrl+Key.Alt+Key.Pgup = 0
+  var.go = 0
+end if
+
+if said("up") then
+  key.VolumeUp = 1
+  wait 300 ms
+  key.VolumeUp = 0
+  var.go = 0
+end if
+
+if said("down") then
+  key.VolumeDown = 1
+  wait 300 ms
+  key.VolumeDown = 0
+  var.go = 0
+end if
+
+if said("mute") then
+//  key.Mute = 0
+  key.Mute = 1
+  wait 300 ms
+  var.go = 0
+end if
+
+if said("sound") then
+  key.VolumeUp = 1
+  wait 300 ms
+  key.VolumeUp = 0
+  var.go = 0
+end if
+
+end if

@@ -1,0 +1,22 @@
+﻿//Cuphead controller for Wii Remote
+//Version 1.0
+//Made by Glix
+
+Key.Up = Wiimote.Right
+Key.Left = Wiimote.Up
+Key.Right = Wiimote.Down
+Key.Down = Wiimote.Left
+
+Key.Z = Wiimote.Two
+Key.X = Wiimote.One
+Key.V = Wiimote.A
+Key.C = Wiimote.B
+Key.LeftShift = Wiimote.Shake
+Key.Shift = Wiimote.Home
+Key.Tab = Wiimote.Plus
+Key.Escape = Wiimote.Minus
+
+Wiimote.Led1 = 0
+Wiimote.Led2 = 1
+Wiimote.Led3 = 1
+Wiimote.Led4 = 0

@@ -1,0 +1,57 @@
+﻿
+Var.Fixed = 10
+
+If Var.Gain = 0 Then
+   Var.Gain = Var.Fixed
+Endif
+
+debug = "Pitch of wiimote is: " + Wiimote.Pitch
+
+ debug=1/RemoveUnits(delta(TimeStamp)) + " fps"
+
+ ; glovepie scripts run about 60 times a second
+ Var.Pitch = MapRange(Smooth(Wiimote.Pitch, 5) , -90 degrees, 90 degrees, -1, 1)
+ Var.Yaw = MapRange(Smooth(Wiimote.Yaw, 5) , -180 degrees, 180 degrees, -1, 1)
+ debug = Var.Pitch +" "+ Var.Yaw
+
+If Wiimote.HasNunchuk = 1 Then
+
+If Abs(Wiimote.Nunchuk.JoyX) < 0.02 Then
+   Var.GainX = 5
+Else If Abs(Wiimote.Nunchuk.JoyX) < 0.2 Then
+   Var.GainX = 10
+Else If Abs(Wiimote.Nunchuk.JoyX) < 0.6 Then
+   Var.GainX = 20
+EndIf
+
+If Abs(Wiimote.Nunchuk.JoyY) < 0.02 Then
+   Var.GainY = 5
+Else If Abs(Wiimote.Nunchuk.JoyY) < 0.2 Then
+   Var.GainY = 10
+Else If Abs(Wiimote.Nunchuk.JoyY) < 0.6 Then
+   Var.GainY = 20
+EndIf
+
+If Wiimote.Nunchuk.C = 1 Then
+   Var.Gain = Var.Gain + 15
+
+   If Var.Gain > 45 Then
+      Var.Gain = Var.Fixed
+   Endif
+
+   wait 500 ms
+Endif
+
+mouse.DirectInput2D = [(mouse.DirectInputX + Var.Gain*deadzone(Wiimote.Nunchuk.JoyX)), (mouse.DirectInputY + Var.Gain*deadzone(Wiimote.Nunchuk.JoyY))]
+
+mouse.LeftButton = Wiimote.A
+mouse.RightButton = Wiimote.B
+
+mouse.WheelUp = Wiimote.Up
+mouse.WheelDown = Wiimote.Down
+
+mouse.MiddleButton = Wiimote.Plus
+
+Key.Escape = Wiimote.Minus
+
+EndIf

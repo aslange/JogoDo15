@@ -1,0 +1,32 @@
+﻿//Buttons to Control Photo Slide With Wii Remote
+//Version 1.0
+//Made by Glix
+
+Key.Up = Wiimote.Right
+Key.Down = Wiimote.Left
+Key.Right = Wiimote.Down
+Key.Left = Wiimote.Up
+
+Key.Enter = Wiimote.A
+
+Key.Escape = Wiimote.Minus
+Key.Alt = Wiimote.Plus
+
+If Wiimote.Home = 1 Then
+   Key.Shift+Key.Delete = Wiimote.One
+   Key.Alt+Key.F4 = Wiimote.Two
+Else
+   Key.Ctrl+Key.Comma = Wiimote.One
+   Key.Ctrl+Key.Dot = Wiimote.Two
+Endif
+
+If Wiimote.Plus = 1 Then
+   Key.Tab = Wiimote.B
+Else
+   Key.BackSpace = Wiimote.B
+Endif
+
+Wiimote.Led1 = 0
+Wiimote.Led2 = 0
+Wiimote.Led3 = 1
+Wiimote.Led4 = 0

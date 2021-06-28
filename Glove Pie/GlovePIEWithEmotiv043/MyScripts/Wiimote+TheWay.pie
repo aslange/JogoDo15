@@ -1,0 +1,40 @@
+﻿//Bastion controller for Wii Remote
+//Version 1.0
+//Made by Glix
+
+var.lookingwatch = Wiimote.Nunchuk.LookingAtWatch
+var.lookingplam = Wiimote.Nunchuk.LookingAtLeftPalm
+var.lookingrightplam = Wiimote.Nunchuk.LookingAtRightPalm
+var.lookingrightwatch = Wiimote.Nunchuk.LookingAtRightWatch
+
+Key.W = Wiimote.Up
+
+If !Wiimote.Nunchuk.LookingAtWatch Then
+   Key.W = Wiimote.Nunchuk.Up
+   Key.A = Wiimote.Nunchuk.Left
+   Key.S = Wiimote.Nunchuk.Down
+   Key.D = Wiimote.Nunchuk.Right
+else
+   Key.W = Wiimote.Nunchuk.Left
+   Key.A = Wiimote.Nunchuk.Down
+   Key.S = Wiimote.Nunchuk.Right
+   Key.D = Wiimote.Nunchuk.Up
+Endif
+
+Mouse.LeftButton = Wiimote.B
+Mouse.RightButton = Wiimote.Right
+Mouse.RightButton = Wiimote.Left
+Key.Space = Wiimote.Nunchuk.Z
+Key.E = Wiimote.Nunchuk.C
+Key.LeftShift = !Wiimote.A
+Key.J = Wiimote.Plus
+Key.Escape = Wiimote.Minus
+
+If Wiimote.PointerVisible then
+   Mouse.CursorPos = [Wiimote.PointerX * Screen.Width, Wiimote.PointerY * Screen.Height]
+Endif
+
+Wiimote.Led1 = 1
+Wiimote.Led2 = 0
+Wiimote.Led3 = 0
+Wiimote.Led4 = 1

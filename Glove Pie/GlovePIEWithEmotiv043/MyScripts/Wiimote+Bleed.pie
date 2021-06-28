@@ -1,0 +1,32 @@
+﻿//Bleed
+
+Key.Q = Wiimote.Down
+Key.Space = Wiimote.B
+Mouse.LeftButton = Wiimote.A
+
+If Wiimote.HasNunchuk = 1 Then
+   Mouse.RightButton = Wiimote.Nunchuk.C
+   Key.A = Wiimote.Nunchuk.Left
+   Key.W = Wiimote.Nunchuk.Up
+   Key.S = Wiimote.Nunchuk.Down
+   Key.D = Wiimote.Nunchuk.Right
+Endif
+
+If Wiimote.One = 1 Then
+	Toggle(Var.P)
+Endif
+
+If Var.P = 1 Then
+	Wiimote.Led3 = 1
+	
+	Var.U = (60 * Abs(Wiimote.SmoothPointerX)) + 650
+	Var.I = (50 * Abs(Wiimote.SmoothPointerY)) + 350
+	
+	Mouse.CursorPos = [Var.U, Var.I]
+Else
+	Wiimote.Led3 = 0
+Endif
+	
+Wiimote.Led1 = 0
+Wiimote.Led2 = 1
+Wiimote.Led4 = 1

@@ -1,0 +1,43 @@
+﻿//Mouse Analogic controller and Apresentation for Wii Remote
+//Version 1.0
+//Made by Glix
+
+var.MyScroll = 10
+
+If Wiimote.Home then
+   If Wiimote.Right then
+      Mouse.WheelUp = Wiimote.Right
+   Endif
+
+   If Wiimote.Left then
+      Mouse.WheelDown = Wiimote.Left
+   Endif
+Else
+   If Wiimote.Up then
+      Mouse.CursorPos = [Mouse.CursorPosX - var.MyScroll, Mouse.CursorPosY]
+   Endif
+
+   If Wiimote.Down then
+      Mouse.CursorPos = [Mouse.CursorPosX + var.MyScroll, Mouse.CursorPosY]
+   Endif
+
+   If Wiimote.Left then
+      Mouse.CursorPos = [Mouse.CursorPosX, Mouse.CursorPosY + var.MyScroll]
+   Endif
+
+   If Wiimote.Right then
+      Mouse.CursorPos = [Mouse.CursorPosX, Mouse.CursorPosY - var.MyScroll]
+   Endif
+Endif
+
+Key.Escape = Wiimote.Minus
+Key.BackSpace = Wiimote.B
+Key.Enter = Wiimote.A
+
+Mouse.LeftButton = Wiimote.One
+Mouse.RightButton = Wiimote.Two
+
+Wiimote.Led1 = 0
+Wiimote.Led2 = 1
+Wiimote.Led3 = 0
+Wiimote.Led4 = 0

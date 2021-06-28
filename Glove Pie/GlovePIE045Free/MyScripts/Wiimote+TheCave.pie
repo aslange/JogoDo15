@@ -1,0 +1,50 @@
+﻿//The Cave controller for Wii Remote
+//Version 1.0
+//Made by Glix
+
+If Wiimote.Home then
+   If Wiimote.Up then
+      Mouse.CursorPos = [Mouse.CursorPosX - 10, Mouse.CursorPosY]
+   Endif
+
+   If Wiimote.Down then
+      Mouse.CursorPos = [Mouse.CursorPosX + 10, Mouse.CursorPosY]
+   Endif
+
+   If Wiimote.Left then
+      Mouse.CursorPos = [Mouse.CursorPosX, Mouse.CursorPosY + 10]
+   Endif
+
+   If Wiimote.Right then
+      Mouse.CursorPos = [Mouse.CursorPosX, Mouse.CursorPosY - 10]
+   Endif
+
+   Key.Escape = Wiimote.One
+   Wiimote.Led1 = 1
+   Wiimote.Led4 = 0
+Else
+   Key.A = Wiimote.Up
+   Key.D = Wiimote.Down
+   Key.W = Wiimote.Right
+   Key.S = Wiimote.Left
+
+   Key.Shift = Wiimote.One
+   Key.Space = Wiimote.Two
+
+   Key.E = Wiimote.A
+   Key.C = Wiimote.Minus
+   Key.Q = Wiimote.B
+
+   If Wiimote.Plus then
+      Key.One = Wiimote.Up
+      Key.Two = Wiimote.Right
+      Key.Three = Wiimote.Down
+   Endif
+
+   Wiimote.Led1 = 1
+   Wiimote.Led2 = 0
+   Wiimote.Led3 = 0
+   Wiimote.Led4 = 1
+Endif
+
+

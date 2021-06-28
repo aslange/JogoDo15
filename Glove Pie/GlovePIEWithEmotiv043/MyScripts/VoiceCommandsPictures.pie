@@ -1,0 +1,35 @@
+﻿if said("PC") then
+  var.go = 1
+end if
+
+//if var.go == 1 then
+
+if said("left") then
+  Key.Ctrl+Key.Comma = 1
+  wait 300 ms
+  Key.Ctrl+Key.Comma = 0
+  var.go = 0
+end if
+
+if said("right") then
+  Key.Ctrl+Key.Dot = 1
+  wait 300 ms
+  Key.Ctrl+Key.Dot = 0
+  var.go = 0
+end if
+
+if said("next") then
+  Key.Left = 1
+  wait 300 ms
+  Key.Left = 0
+  var.go = 0
+end if
+
+if said("back") then
+  Key.Right = 1
+  wait 300 ms
+  Key.Right = 0
+  var.go = 0
+end if
+
+//end if

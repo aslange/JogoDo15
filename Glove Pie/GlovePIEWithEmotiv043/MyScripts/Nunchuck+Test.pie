@@ -1,0 +1,6 @@
+﻿
+Key.A = Pressed(Wiimote.LookingAtRightPalm)
+Key.B = Released(Wiimote.LookingAtRightPalm)
+
+// the menu is on your watch 
+Key.D = Pressed(Nunchuk.LookingAtWatch) or Released(Nunchuk.LookingAtWatch)
