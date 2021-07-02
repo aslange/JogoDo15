@@ -1,2 +1,2 @@
-# WiiMotePowered
-Personal scripts that I made for many Wii games and Wiimote applications using Glove Pie software.
+# JogoDo15
+Jogo de baralho simples desenvolvido em C por um aluno muito inexperience.
